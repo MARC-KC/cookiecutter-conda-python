@@ -24,14 +24,6 @@ build:
   {% if cookiecutter.noarch_python == 'y' -%}
   noarch: python
   {% endif %}
-  {% if cookiecutter.include_cli == 'y' -%}
-  {% raw -%}
-  entry_points:
-    {% for entry in data['entry_points']['console_scripts'] %}
-      - {{ entry.split('=')[0].strip() }} = {{ entry.split('=')[1].strip() }}
-    {% endfor %}
-  {%- endraw %}
-  {% endif %}
 
 requirements:
   # if you need compilers, uncomment these
