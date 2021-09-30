@@ -48,6 +48,7 @@ jobs:
       - name: Push to Anaconda
         run: |
           cd /opt/conda/conda-bld
+          anaconda_user={{cookiecutter.anaconda_user}} 
           {% raw -%}
-          anaconda  -t ${{secrets.ANACONDA_TOKEN}} upload --user {{cookiecutter.anaconda_user}} --label main noarch/*.tar.bz2
+          anaconda  -t ${{secrets.ANACONDA_TOKEN}} upload --user $anaconda_user --label main noarch/*.tar.bz2
           {%- endraw %}
