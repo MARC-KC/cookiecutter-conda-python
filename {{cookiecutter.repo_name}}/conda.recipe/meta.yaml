@@ -35,6 +35,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
     {# raw is for ignoring templating with cookiecutter, leaving it for use with conda-build -#}
