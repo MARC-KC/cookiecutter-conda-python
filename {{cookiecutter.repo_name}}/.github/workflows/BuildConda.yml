@@ -39,7 +39,7 @@ jobs:
           
       - name: Run Tests
         run: |
-          pytest --color=yes -v --cov=marcpy tests
+          pytest --color=yes -v --cov={{cookiecutter.anaconda_user}} tests
           conda install -c conda-forge codecov
           codecov
 
@@ -48,7 +48,5 @@ jobs:
       - name: Push to Anaconda
         run: |
           cd /opt/conda/conda-bld
-          anaconda_user={{cookiecutter.anaconda_user}} 
-          {% raw -%}
-          anaconda  -t ${{secrets.ANACONDA_TOKEN}} upload --user $anaconda_user --label main noarch/*.tar.bz2
-          {%- endraw %}
+          anaconda -t {% raw %}${{secrets.ANACONDA_TOKEN}}{% endraw %} upload --user {{cookiecutter.anaconda_user}}  --label main noarch/*.tar.bz2
+          
