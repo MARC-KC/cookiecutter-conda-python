@@ -53,3 +53,8 @@ You'll still need to activate the web services you want to use - they won't be a
  - __GitHub Actions__: You will need to add a ANACONDA_TOKEN to your secrets to enable the push of the conda package to your chosen Anaconda user
  - __Codecov__: No configuration necessary - project will be created when first successful CI run completes and uploads coverage results
  - __Codacy__: https://support.codacy.com/hc/en-us/articles/207278449-Getting-started-with-Codacy
+
+
+## Credits
+
+Project forked and adapted from [conda/cookiecutter-conda-python](https://github.com/conda/cookiecutter-conda-python).
