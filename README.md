@@ -37,7 +37,7 @@ Once cookiecutter clones the template, you will be asked a series of questions r
 
     $ noarch_python [y]: Should the package be a noarch build archetecture?
 
-    $ open_source_license ["MIT", "BSD", "ISC", "Apache", "GNUv3", "Proprietary"]: Choose a license to use.
+    $ open_source_license ["GNUv3", "MIT", "BSD", "ISC", "Apache", "Proprietary"]: Choose a license to use.
 
     $ anaconda_user [Destination anaconda organization or username]: Enter the name of the anaconda user or organization that you want the GitHub Action to publish to.
 

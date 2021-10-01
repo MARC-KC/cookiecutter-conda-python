@@ -6,6 +6,6 @@
   "package_name": "{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-','_') }}",
   "project_short_description": "Short description",
   "noarch_python": "y",
-  "open_source_license": ["MIT", "BSD", "ISC", "Apache", "GNUv3", "Proprietary"],
+  "open_source_license": ["GNUv3", "MIT", "BSD", "ISC", "Apache", "Proprietary"],
   "anaconda_user": "marc-kc"
 }
